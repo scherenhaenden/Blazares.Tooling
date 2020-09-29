@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazares.Tooling", "Blazares.Tooling\Blazares.Tooling.csproj", "{FE95FEA2-1897-4BA7-A08F-D8FA3820B1C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazares.Tooling.Test", "Blazares.Tooling.Test\Blazares.Tooling.Test.csproj", "{B5B2E335-BB30-47C4-A85F-1E83A0137D60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{FE95FEA2-1897-4BA7-A08F-D8FA3820B1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE95FEA2-1897-4BA7-A08F-D8FA3820B1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE95FEA2-1897-4BA7-A08F-D8FA3820B1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B2E335-BB30-47C4-A85F-1E83A0137D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B2E335-BB30-47C4-A85F-1E83A0137D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B2E335-BB30-47C4-A85F-1E83A0137D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B2E335-BB30-47C4-A85F-1E83A0137D60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
