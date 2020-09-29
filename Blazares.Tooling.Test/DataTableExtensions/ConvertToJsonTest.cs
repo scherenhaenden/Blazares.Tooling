@@ -38,7 +38,7 @@ namespace Blazares.Tooling.Test.DataTableExtensions
                 isJson = true;
 
             }
-            catch (JsonReaderException ex)
+            catch (JsonReaderException)
             {
             }
             Assert.True(isJson);
