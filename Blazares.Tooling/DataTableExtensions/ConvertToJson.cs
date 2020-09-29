@@ -10,10 +10,10 @@ namespace Blazares.Tooling.DataTableExtensions
     public static class ConvertToJson
     {
         /// <summary>
-        /// 
+        /// This Method will concert the Datatable data into a JSON String.
         /// </summary>
         /// <param name="dataTable"></param>
-        /// <returns>json string or exception</returns>
+        /// <returns>Json String. Exceptions will not be caught in this method</returns>
         public static string ToJson(this DataTable dataTable)
         {
             var JSONString = new StringBuilder();
@@ -46,72 +46,6 @@ namespace Blazares.Tooling.DataTableExtensions
                 JSONString.Append("]");
             }
             return JSONString.ToString();
-        }
-        
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dataTable"></param>
-        /// <returns>json string or exception</returns>
-        public static string ToJsonV2(this DataTable dataTable)
-        {
-            var list = new List<Dictionary<string, object>>();
-
-            foreach (DataRow row in dataTable.Rows)
-            {
-                var dict = new Dictionary<string, object>();
-
-                foreach (DataColumn col in dataTable.Columns)
-                {
-                    dict[col.ColumnName] = (Convert.ToString(row[col]));
-                }
-                list.Add(dict);
-            }
-            
-            string i = JsonConvert.SerializeObject(list, Formatting.Indented
-                , new JsonSerializerSettings
-                {
-                    PreserveReferencesHandling = PreserveReferencesHandling.All
-                    ,ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                });
-
-            return i;
-        }
-        
-        
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="dataTable"></param>
-        /// <returns>json string or exception</returns>
-        public static string ToJsonV3(this DataTable dataTable)
-        {
-            try
-            {
-                string result;
-                using (StringWriter sw = new StringWriter())
-                {
-                    dataTable.WriteXml(sw);
-                    result = sw.ToString();
-                }
-
-                string i = JsonConvert.SerializeObject(result, Formatting.Indented
-                /*, new JsonSerializerSettings
-                    {
-                        PreserveReferencesHandling = PreserveReferencesHandling.All
-                        ,ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                    }*/);
-                return i;
-            }
-
-            catch (Exception any)
-            {
-              
-            }
-
-            return "";
         }
     }
 }
