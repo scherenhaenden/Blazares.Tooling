@@ -1,6 +1,8 @@
 using System;
 using System.Data;
 using Blazares.Tooling.DataTableExtensions;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 
 namespace Blazares.Tooling.Test.DataTableExtensions
@@ -13,7 +15,7 @@ namespace Blazares.Tooling.Test.DataTableExtensions
         }
 
         [Test]
-        public void Test1()
+        public void ConvertTableToJsonAndValidateIt()
         {
             DataTable table = new DataTable();
             table.TableName = "testName";
@@ -27,10 +29,19 @@ namespace Blazares.Tooling.Test.DataTableExtensions
             table.Rows.Add(50, "Drug Z", "Problem Z", DateTime.Now);
             table.Rows.Add(10, "Drug Q", "Disorder Q", DateTime.Now);
             table.Rows.Add(21, "Medicine A", "Diagnosis A", DateTime.Now);
-
-            var result =table.ToJson();
             
-            Assert.Pass();
+            var result =table.ToJson();
+            bool isJson = false;
+            try
+            {
+                JToken.Parse(result);
+                isJson = true;
+
+            }
+            catch (JsonReaderException ex)
+            {
+            }
+            Assert.True(isJson);
         }
     }
 }
