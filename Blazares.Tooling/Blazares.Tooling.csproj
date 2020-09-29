@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageVersion>0.0.2</PackageVersion>
+        <PackageVersion>0.0.3</PackageVersion>
         <Title>Blazares.Tooling</Title>
         <Authors>Eddie Krill</Authors>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
