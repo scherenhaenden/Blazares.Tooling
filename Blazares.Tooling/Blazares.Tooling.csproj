@@ -2,6 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>Blazares.Tooling</Title>
+        <Authors>Eddie Krill</Authors>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageProjectUrl>https://github.com/scherenhaenden/Blazares.Tooling</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/scherenhaenden/Blazares.Tooling</PackageLicenseUrl>
     </PropertyGroup>
 
     <ItemGroup>

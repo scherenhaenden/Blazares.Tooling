@@ -18,8 +18,6 @@ This project is intended to convert all the generic functionalities I would need
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |Functionality|Done|Tested|
 |ConvertionToJson|Yes|Partialy|
-|Datatables|:-------------------------:|:-------------------------:|
-|Datatables|:-------------------------:|:-------------------------:|
 
 
 ### JSON 
