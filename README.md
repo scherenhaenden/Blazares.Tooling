@@ -14,6 +14,17 @@ This project is intended to convert all the generic functionalities I would need
 |ConvertionToJson|Yes|Partialy|
 
 
+### ByteArray-Objects convertions 
+ 
+
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|Functionality|Done|Tested|
+|From Object to Byte Array|Yes|Yes|
+|From Byte Array to Object|Yes|Yes|
+
+
+
 ### JSON 
  
 
